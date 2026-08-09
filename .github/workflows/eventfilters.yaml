@@ -2,6 +2,7 @@ name: event filters demo
 
 on:
     push:
+
         branches: 
         - main
         paths:
