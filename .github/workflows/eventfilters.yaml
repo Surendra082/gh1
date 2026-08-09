@@ -1,0 +1,13 @@
+name: event filters demo
+
+on:
+    push:
+
+
+jobs:
+    event-job:
+        runs-on: ubuntu-slim
+        steps:
+            - name: my event job demo
+              run: |
+                echo "event job demo"
