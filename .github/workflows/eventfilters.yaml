@@ -22,3 +22,8 @@ jobs:
             - name: my event job demo
               run: |
                 echo "event job demo"
+                echo "${{github.actor}}"
+                echo "${{github.event_name}}"
+                echo "${{github.run_id}}"
+                echo "${{github.run_number}}"
+                echo "${{github.ref}}"
