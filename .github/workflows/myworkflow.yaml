@@ -2,7 +2,7 @@ name: My first workflow
 run-name: my job-first 
 
 on:
-  push:
+  workflow_dispatch: 
 
 jobs:
   myjob1:
