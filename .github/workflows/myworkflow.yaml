@@ -14,4 +14,11 @@ jobs:
         run: |
           echo "how r u ?"
           echo "hi i am fine"
-    
+
+  
+  myjob2:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: job2-step1
+        run: |
+          echo "this si sjob2 "
