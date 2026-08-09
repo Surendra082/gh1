@@ -9,4 +9,8 @@ jobs:
     steps:
       - name: displaying a msg
         run: echo "this is my first workflow"
+      - name: hello
+        run: |
+          echo "how r u ?"
+          echo "hi i am fine"
     
