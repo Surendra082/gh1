@@ -1,0 +1,14 @@
+name: My second workflow
+
+on: 
+    push:
+    workflow_dispatch:   
+
+jobs:
+    josh-job:
+        runs-on: ubuntu-slim
+        steps:
+        - name: my step from second workflow
+          run: |
+            echo "hello how r u ??"
+

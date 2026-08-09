@@ -2,8 +2,10 @@ name: My first workflow
 run-name: my job-first 
 
 on:
+  #push:
   workflow_dispatch: 
-
+  #schedule:
+  #  - cron: 0 */4 * * *
 jobs:
   myjob1:
     runs-on: ubuntu-latest
