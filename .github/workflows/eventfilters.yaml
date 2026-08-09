@@ -1,13 +1,16 @@
 name: event filters demo
 
 on:
-    push:
+    pull_request: 
 
         branches: 
         - main
         paths:
         - 'surendra/**'
-        
+
+        types:
+         - opened
+         - synchronize
 
 
 
