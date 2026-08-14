@@ -29,3 +29,6 @@ jobs:
                 echo "MY SCHOOL IS ${{vars.SCHOOL}}"
                 echo "MY Education is ${{vars.EDUCATION}}"
                 echo "My secret is ${{secrets.MYPASSWORD}}"
+                echo "MY runner info ${{runner.name}}"
+                echo "MY runner info ${{runner.os}}"
+                echo "MY runner info ${{runner.arch}}"
