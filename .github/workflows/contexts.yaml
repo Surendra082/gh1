@@ -9,9 +9,15 @@ env:
 jobs:
     my_context_job:
         runs-on: ubuntu-latest
+        env: 
+            MY_NAME: "Josh"
+            MY_JOB: "AI Engineer"
+            MY_ADD: "Guntur" 
+
         steps:
             - name: first step
               run: |
                 echo "this is context demo"
                 echo "My name is ${{ env.MY_NAME }}"
                 echo "My job is ${{ env.MY_JOB }}"
+                echo "My Add is ${{env.MY_ADD}}"
