@@ -1,7 +1,7 @@
 name: contexts-demo
 on:
     workflow_dispatch:
-
+run-name: My context demo
 env:
     MY_NAME: "Surendra"
     MY_JOB: "DevOps Engineer"
