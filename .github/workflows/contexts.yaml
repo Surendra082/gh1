@@ -1,0 +1,12 @@
+name: contexts-demo
+on:
+    workflow_dispatch:
+
+
+jobs:
+    my_context_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step
+              run: |
+                echo "this is context demo"
