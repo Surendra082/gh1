@@ -1,6 +1,20 @@
 name: event filters demo
 
 on:
+    workflow_dispatch:
+      inputs:
+        myname:
+          type: boolean
+          description: my workflow descrpiton
+          #required: false
+          default: true
+        myjob:
+           type: choice
+           required: true
+           options:
+             - DevOps
+             - AWS
+             - SRE
     pull_request: 
 
         branches: 
@@ -21,3 +35,14 @@ jobs:
             - name: my event job demo
               run: |
                 echo "event job demo"
+                echo "${{github.actor}}"
+                echo "${{github.event_name}}"
+                echo "${{github.run_id}}"
+                echo "${{github.run_number}}"
+                echo "${{github.ref}}"
+
+            - name: inputs context working
+              run: |
+                echo "${{inputs.myname}}"
+                echo "${{inputs.myjob}}"
+             
