@@ -2,6 +2,9 @@ name: contexts-demo
 on:
     workflow_dispatch:
 
+env:
+    MY_NAME: "Surendra"
+    MY_JOB: "DevOps Engineer"
 
 jobs:
     my_context_job:
@@ -10,3 +13,5 @@ jobs:
             - name: first step
               run: |
                 echo "this is context demo"
+                echo "My name is ${{ env.MY_NAME }}"
+                echo "My job is ${{ env.MY_JOB }}"
