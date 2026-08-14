@@ -16,6 +16,11 @@ jobs:
 
         steps:
             - name: first step
+              env:
+                 MY_NAME: "Kamal"
+                 MY_JOB: "Principal Engineer"
+                 MY_ADD: "Hyd" 
+
               run: |
                 echo "this is context demo"
                 echo "My name is ${{ env.MY_NAME }}"
