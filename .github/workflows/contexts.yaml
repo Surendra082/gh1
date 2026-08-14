@@ -28,3 +28,4 @@ jobs:
                 echo "My Add is ${{env.MY_ADD}}"
                 echo "MY SCHOOL IS ${{vars.SCHOOL}}"
                 echo "MY Education is ${{vars.EDUCATION}}"
+                echo "My secret is ${{secrets.MYPASSWORD}}"
