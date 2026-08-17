@@ -1,0 +1,21 @@
+name: Outputs Demo
+on:
+    workflow_dispatch: 
+
+
+jobs:
+    job1:
+        runs-on: ubuntu-slim
+        steps:
+            - name: my step1
+              run: |
+                echo "this is job1"
+
+
+    job2:
+        runs-on: ubuntu-slim
+        steps:
+            - name: my step2
+              run: |
+                echo "this is job2"
+                
