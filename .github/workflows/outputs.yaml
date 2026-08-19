@@ -7,8 +7,8 @@ jobs:
     job1:
         runs-on: ubuntu-slim
         outputs:
-          myname: "${{steps.josh.ouputs.name}}"
-          myjob: "${{steps.josh.ouputs.job}}"
+          myname: "${{steps.josh.outputs.name}}"
+          myjob: "${{steps.josh.outputs.job}}"
 
         steps:
             - name: my step1
@@ -20,8 +20,8 @@ jobs:
             
             - name: my step2
               run: |
-                 echo "${{steps.josh.ouputs.name}}"
-                 echo "${{steps.josh.ouputs.job}}"
+                 echo "${{steps.josh.outputs.name}}"
+                 echo "${{steps.josh.outputs.job}}"
 
 
 
@@ -32,7 +32,7 @@ jobs:
             - name: my step2
               run: |
                 echo "this is job2"
-                echo "${{needs.job1.ouputs.myname}}"
-                echo "${{needs.job1.ouputs.myjob}}"
+                echo "${{needs.job1.outputs.myname}}"
+                echo "${{needs.job1.outputs.myjob}}"
 
                 
