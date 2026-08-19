@@ -6,16 +6,33 @@ on:
 jobs:
     job1:
         runs-on: ubuntu-slim
+        outputs:
+          myname: "${{steps.josh.ouputs.name}}"
+          myjob: "${{steps.josh.ouputs.job}}"
+
         steps:
             - name: my step1
+              id: josh
               run: |
                 echo "this is job1"
+                echo "name=josh" >> "$GITHUB_OUTPUT "
+                echo "job='josh' >> " $GITHUB_OUTPUT "
+            
+            - name: my step2
+              run: |
+                 echo "${{steps.josh.ouputs.name}}"
+                 echo "${{steps.josh.ouputs.job}}"
+
 
 
     job2:
         runs-on: ubuntu-slim
+        needs: job1
         steps:
             - name: my step2
               run: |
                 echo "this is job2"
+                echo "${{needs.job1.ouputs.myname}}"
+                echo "${{needs.job1.ouputs.myjob}}"
+
                 
