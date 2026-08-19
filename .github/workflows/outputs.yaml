@@ -16,7 +16,7 @@ jobs:
               run: |
                 echo "this is job1"
                 echo "name=josh" >> "$GITHUB_OUTPUT "
-                echo "job='josh' >> " $GITHUB_OUTPUT "
+                echo "job=josh" >> " $GITHUB_OUTPUT "
             
             - name: my step2
               run: |
